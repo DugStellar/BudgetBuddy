@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#252525"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvItemCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="#00FF41"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch at work"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/tvItemCategory"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R150.00"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
