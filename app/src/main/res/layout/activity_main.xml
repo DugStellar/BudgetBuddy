@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
+    android:background="@color/bg_white"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BudgetBuddy"
-        android:textColor="#00FF41"
-        android:textSize="32sp"
+        android:textColor="@color/brand_blue"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,27 +27,37 @@
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Take control of your spending"
-        android:textColor="#BBBBBB"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        android:layout_marginTop="12dp"
+        android:text="Take control of your spending today"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-    <Button
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMainExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnStart"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#00FF41"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
         android:text="Get Started"
-        android:textColor="#000000"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         android:textStyle="bold"
+        app:backgroundTint="@color/brand_blue"
+        app:cornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

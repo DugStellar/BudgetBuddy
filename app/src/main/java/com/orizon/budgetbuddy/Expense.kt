@@ -9,6 +9,8 @@ data class Expense(
     val description: String,
     val amount: Double,
     val category: String,
-    val imagePath: String? = null,
-    val timestamp: Long = System.currentTimeMillis()
+    val date: String = "",
+    val startTime: String = "",
+    val endTime: String = "",
+    val photoUri: String? = null
 )
