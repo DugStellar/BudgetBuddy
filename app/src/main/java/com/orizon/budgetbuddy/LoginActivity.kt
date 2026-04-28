@@ -57,9 +57,9 @@ class LoginActivity : AppCompatActivity() {
                     if (existingUser == null) {
                         val result = db.userDao().registerUser(User(username = user, password = pass))
                         if (result != -1L) {
-                            Toast.makeText(this@LoginActivity, "Account Created! You can now login.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@LoginActivity, "Account Created! You can now log in.", Toast.LENGTH_SHORT).show()
                         } else {
-                            Toast.makeText(this@LoginActivity, "Registration failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@LoginActivity, "Registration failed, try again", Toast.LENGTH_SHORT).show()
                         }
                     } else {
                         Toast.makeText(this@LoginActivity, "Username already exists", Toast.LENGTH_SHORT).show()
