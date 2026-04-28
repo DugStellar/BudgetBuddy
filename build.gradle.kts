@@ -3,4 +3,5 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
     // KSP version must match your Kotlin version
     id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    alias(libs.plugins.google.gms.google.services) apply false
 }
